@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content_main %}
+
+    <h2>Wecome to my Blog</h2>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3>{{ bbs.title }}</h3><br>
+    <p>{{ bbs.summary }}</p>
+    <p>{{ bbs.content }}</p>
+    <p>Views: {{ bbs.view_count }}</p>
+    <p>{{ bbs.create_time }}</p>
+    <p>{{ bbs.modify_time }}</p>
+    <br>
+    <br>
+{% endblock %}
+

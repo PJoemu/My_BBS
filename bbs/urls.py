@@ -16,5 +16,11 @@ from django.conf.urls import include, url
 import views
 
 urlpatterns = [
-    url(r'^$', views.index)
+    url(r'^$', views.index),
+    url(r'^blog/(?P<bbs_id>\d)$', views.bbs_detail),
+    url(r'^blog/api/$', views.bbs_all),
+    url(r'^blog/api/(?P<pk>\d)$', views.bbs_detail_rest),
+    url(r'^user/api/$', views.BbsUserView.as_view()),
+    url(r'^user/api/(?P<id>\d)$', views.BbsUserDetailView.as_view()),
+
 ]
